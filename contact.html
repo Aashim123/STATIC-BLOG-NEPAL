@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <!-- Header code here -->
+
+    <header class="navbar">
+        <div class="img">
+            <img src="./assets/logo.png" alt="life" height="70px" width="70px"> 
+        </div>
+      <div>
+          <ul class="pages">
+              <li><a href="./index.html">Home</a></li>
+              <li class="dropdown">
+                  <button class="dropbtn">PROVINCES</button>
+                  <div class="dropdown-content">
+                  <a href="./province1.html">
+                      province1
+                  </a>
+                  <a href="./province2.html">
+                      province2
+                  </a>
+                  <a href="./province3.html">province3</a>
+                  <a href="./province4.html">province4</a>
+                  <a href="./province5.html">province5</a>
+                  <a href="./province6.html">province6</a>
+                  <a href="./province7.html">province7</a>
+                  </div>
+              </li>
+              <li><a href="./gallery.html">Gallery</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="./about.html">About US</a></li>
+          
+          </ul>
+      </div>
+  </header>
+
+    <div class="containers">
+        <h1>Contact Us</h1><br>
+        <br>
+        <p>We would love to respond to your queries and help you succeed.<br> Feel free to get in touch with us.</p>
+        <br>
+        <br>
+        <div class="contact-form">
+            <form id="form"  action="retrieveform.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="txtname" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="txtemail" required>
+
+                <label for="phone">Phone no:</label>
+                <input type="text" id="phone" name="txtphone" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="txtmessage" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+   <!-- ... Your existing HTML code ... -->
+
+   <!-- <script>
+    var form = document.getElementById("form");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var message = document.getElementById("message").value;
+
+        // Create an object with the form data
+        var formData = new URLSearchParams();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("phone", phone);
+    formData.append("message", message);
+
+    // Send an Axios POST request to the PHP script with the correct content type
+    axios.post('./process_form.php', formData, {
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    })
+            .then(function(response) {
+
+                // Handle the success response from the server (e.g., display a success message)
+                window.alert(response.data);
+            })
+            .catch(function(error) {
+                // Handle errors
+                window.alert("Error: " + error.message);
+            });
+    });
+</script> -->
+
+
+<!-- ... Your existing HTML code ... -->
+
+
+<br>
+<br>
+<div class="footer">
+    <p> Copyright &copy; 2023 Blog Nepal(Travel all over Nepal)</p>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
